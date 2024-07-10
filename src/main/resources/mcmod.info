@@ -5,8 +5,8 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "${giturl}",
-  "updateUrl": "https://raw.githubusercontent.com/cow-mc/Cowlection/master/update.json",
-  "authorList": ["Cow"],
+  "updateUrl": "https://raw.githubusercontent.com/onyx-mc/Onyxpannel/master/update.json",
+  "authorList": ["Onyx"],
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
