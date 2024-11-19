@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Bestiary overview (`/be`):
   - fixed detection of maxed bestiary entries
   - fixed detection of bestiary categories with sub-categories
-- Party Finder: added support for multi-line party notes (https://github.com/onyx-mc/Onyxpannel/pull/8)
+- Party Finder: added support for multi-line party notes (https://github.com/skyh-mc/Skyhaven/pull/8)
 - Party Finder Rules Editor: changed party note display conditions for unjoinable/blocked parties in Rules Editor to match display inside Party Finder 
 - Dungeons overlay: fixed possible incompatibility when another mod modifies the crypts count in the tab list
 
@@ -17,20 +17,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Note on API keys ❗
 In case you haven't heard yet: player-based API keys are currently being phased out (see also forums post about [Public API Changes](https://hypixel.net/threads/public-api-changes-february-2023.5266129/)).
 
-Therefore, **API-related features _that require an API key_ will probably stop working in the foreseeable future**. I _don't_ currently plan to provide my own API backend system, so sooner or later the few features in Onyxpannel that require an API key will probably stop working.
+Therefore, **API-related features _that require an API key_ will probably stop working in the foreseeable future**. I _don't_ currently plan to provide my own API backend system, so sooner or later the few features in Skyhaven that require an API key will probably stop working.
 
 However, there are some Discord bots (e.g. [SkyHelper](https://skyhelper.altpapier.dev/)), other bigger SkyBlock mods, and some websites that provide similar API-based player lookup functionality.
 
 The affected features are the following:
-1. `/onyx stalk`: check online status & current game of a user
-2. `/onyx stalkskyblock`: check SkyBlock stats of a player
-3. `/onyx dungeon party` (= `/onyx dp`): lookup armor and dungeons stats of each Dungeons party member
+1. `/skyh stalk`: check online status & current game of a user
+2. `/skyh stalkskyblock`: check SkyBlock stats of a player
+3. `/skyh dungeon party` (= `/skyh dp`): lookup armor and dungeons stats of each Dungeons party member
 
-All other features of Onyxpannel *do not* require an API key and thus should be unaffected by the API-related changes.
+All other features of Skyhaven *do not* require an API key and thus should be unaffected by the API-related changes.
 
 ### Removed
-- Removed Onyxpannel 'Best friends' list:
-  - Migrate your current Onyxpannel best friends with `/onyx bestfriends`
+- Removed Skyhaven 'Best friends' list:
+  - Migrate your current Skyhaven best friends with `/skyh bestfriends`
   - Hypixel added their own 'Best friends' list quite a while ago: [see patch notes for 'Social Update'](https://hypixel.net/threads/social-update-online-status-best-friends-more.4638020/)
     - Hypixel's best friends list does basically the same, plus doesn't require *any* API requests
     - View best friends list: `/friend list best` or `/fl best`
@@ -41,19 +41,19 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
       - `/guild notifications` to toggle Guild notifications, or `/settings` → Personal Guild Settings → Guild Notifications
 
 ### Fixed
-- Bestiary Overview (`/onyx config bestiary` + `/be`): adapted tooltip detection for newly added bestiary entries
+- Bestiary Overview (`/skyh config bestiary` + `/be`): adapted tooltip detection for newly added bestiary entries
 - Pet exp in tooltips: fixed rare crash caused by unexpected NBT data typing
 - Bazaar: fixed "Show items left to buy/sell" for buy/sell orders not working anymore
 - Enchanted books: fixed "price converted to level 1 books", as enchantments are now sold on the Bazaar, and no longer inside the Auction house
   - works on "intermediate" Bazaar pages, so the 'overview' Bazaar pages that list all levels of a certain enchantment (GUI title starts with either `Enchantments ➜` or `Ultimate Enchantments ➜`)
-  - (related config options: `/onyx config enchantment`)
-- `/onyx analyzeChests`: lowest BINs are now stored as long values instead of integers (affects only a handful of items with very high BIN prices)
+  - (related config options: `/skyh config enchantment`)
+- `/skyh analyzeChests`: lowest BINs are now stored as long values instead of integers (affects only a handful of items with very high BIN prices)
 
 ### Changed
 - Dungeons overlay: now disabled by default (old config entries aren't modified)
 - SkyBlock player lookup: removed 'last played/last profile save' as it's no longer part of the API
 - Analyze island: added new Minion (Vampire) and updated texture IDs for minions that previously erroneously shared the same skin
-- `/onyx directory`: added 2nd parameter to open either `/config/onyxpannel` or `/mods/` directory
+- `/skyh directory`: added 2nd parameter to open either `/config/skyhaven` or `/mods/` directory
 - some Hypixel API related changes regarding API key validation
 
 ## [1.8.9-0.15.1] - 22.12.2022
@@ -63,17 +63,17 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 ## [1.8.9-0.15.0] - 23.10.2022
 ### Added
 
-- Added data for new content since the last release of Onyxpannel:
-  - `/onyx stalkskyblock`:
+- Added data for new content since the last release of Skyhaven:
+  - `/skyh stalkskyblock`:
     - added stranded and bingo mode
     - added Social skill (exp wasn't available on the API before)
     - updated skill average calculation (carpentry is no longer a 'cosmetic' skill)
     - added new slayers (enderman + blaze)
-  - `/onyx analyzeIsland`: added new minions (mainly Crimson Isle related)
-- `/onyx analyzeIsland`:
+  - `/skyh analyzeIsland`: added new minions (mainly Crimson Isle related)
+- `/skyh analyzeIsland`:
   - Added chests and hopper counters
   - Added accumulating results: repeat the command and scan multiple areas of an island
-- `/onyx analyzeChests`: Chest Analyzer rework:
+- `/skyh analyzeChests`: Chest Analyzer rework:
   - Added search
   - Added NPC sell prices (only used if an item has neither a Bazaar nor lowest BIN price, or if one of them is hidden)
   - Added 'deselect/hide item' = not calculated in total price sum (right click inside GUI)
@@ -82,9 +82,9 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ### Changed
 
-- `/onyx search`: Allow empty search query (= returns all log entries between start and end date)
-- `/onyx stalkskyblock`: replaced "last played" with "last time *someone* played on the selected profile"
-- Updated quick lookup for item prices and wiki: (`/onyx config item`)
+- `/skyh search`: Allow empty search query (= returns all log entries between start and end date)
+- `/skyh stalkskyblock`: replaced "last played" with "last time *someone* played on the selected profile"
+- Updated quick lookup for item prices and wiki: (`/skyh config item`)
   - wiki: also added official wiki (use <kbd>SHIFT</kbd> to switch between Fandom and official wiki; default wiki key: <kbd>I</kbd> = info)
   - item prices: replaced stonks.gg with sky.coflnet.com (default key: <kbd>P</kbd> = price)
 - Party Finder Rules Editor: increased character limit per rule from 32 to 255
@@ -93,10 +93,10 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ### Fixed
 
-- Fixed various API related issues caused by updates since the last release of Onyxpannel:
+- Fixed various API related issues caused by updates since the last release of Skyhaven:
   - determining the active/selected profile
   - Minecraft username lookup by uuid changed since username history API got removed
-- Fixed GUI related issues caused by updates since the last release of Onyxpannel:
+- Fixed GUI related issues caused by updates since the last release of Skyhaven:
   - Fixed detection for `/bestiary` overview
 - (technical fix: add support for [public Hypixel API SSL certificate changes](https://hypixel.net/threads/public-api-ssl-certificate-changes.5116193/))
 
@@ -110,32 +110,32 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 - (Dungeons) player lookups:
   - added ironman icon ♲
   - added average secrets per completion
-- Dungeon Party Finder: customizable Party Notes filters (`/onyx dungeon rules` or `/onyx dr`)
+- Dungeon Party Finder: customizable Party Notes filters (`/skyh dungeon rules` or `/skyh dr`)
   - Add and edit additional rules to mark Dungeon parties based on their Party notes
 - Added data for Enderman slayer, Voidling minions, Hard Stone minions, and Golden Dragon (lvl 101+ pets)
 - New keybindings to...
-  1) run `/onyx waila` command (disabled by default; MC Options > Controls > `Onyxpannel`)
+  1) run `/skyh waila` command (disabled by default; MC Options > Controls > `Skyhaven`)
   2) copy a single item to clipboard as JSON with <kbd>CTRL</kbd> + <kbd>C</kbd>
-     - must be enabled in `/onyx config > General > Copy inventories with CTRL + C` first
+     - must be enabled in `/skyh config > General > Copy inventories with CTRL + C` first
      - changed 'copy whole inventory' keybinding to <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>C</kbd> (with <kbd>SHIFT</kbd>)
 - New config options for older features:
-  - ▶ `/onyx config new`: show all new or changed config options
-  - Output of `/onyx waila` and copied inventory data can now also be saved to files, instead of being copied to clipboard
+  - ▶ `/skyh config new`: show all new or changed config options
+  - Output of `/skyh waila` and copied inventory data can now also be saved to files, instead of being copied to clipboard
   - Bazaar: order 'Sell Inventory/Sacks Now' tooltips ascending or descending
-  - MC Log file search (`/onyx search`): maximum log file size to analyze
+  - MC Log file search (`/skyh search`): maximum log file size to analyze
   - Toggle: display dungeon performance summary at the end of a dungeon
   - Toggle: send warning when queued and entered dungeon floors are different
   - Toggle: shorten item quality info for non-randomized items
-- New sub-command `/onyx discord`: OnyxX discord server invite
+- New sub-command `/skyh discord`: SkyhX discord server invite
 
 ### Changed
-- Disabled `M` keybinding in MC Options > Controls > Onyxpannel by default to avoid conflicts
-- `/onyx config` sub-category explanations now default to "tooltip *without* darkened background", as the darkened background was more irritating than helpful 
+- Disabled `M` keybinding in MC Options > Controls > Skyhaven by default to avoid conflicts
+- `/skyh config` sub-category explanations now default to "tooltip *without* darkened background", as the darkened background was more irritating than helpful 
 - MC Log file search now skips large files to prevent huge log files from blocking the search
 - Dungeon Party Finder: Each dungeon class can now also be blocked or blocked if duplicated (= red party background)
 - Disabled dungeon tooltip cleaner inside dungeons (+ fixed a rare crash)
 - Improved error messages for API errors and API related messages
-  - also added API key usage statistics to `/onyx apikey`
+  - also added API key usage statistics to `/skyh apikey`
 
 ### Fixed
 - 'Show Dungeon item base stats' feature now works with HPB'd items and master stars
@@ -148,30 +148,30 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 - Bestiary Overview: enhances tooltips of `/bestiary` ⬌ `/be`
   - hover over one of the area/location-items in a *sub*-category of the Bestiary to see an overview of the tiers upgrades you are closest to
   - can be ordered by fewest kills or lowest % to next tier by clicking on the area/location item
-- `/onyx whatAmILookingAt` (or: `/m waila`)
+- `/skyh whatAmILookingAt` (or: `/m waila`)
   - copy info of "the thing" you're looking at (NPC or mob + nearby "text-only" armor stands; armor stand, placed skull, banner, sign, dropped item, item in item frame, map on wall)
   - automatically decodes base64 data (e.g. skin details) and unix timestamps
 - Chest Tracker & Analyzer: Evaluate Bazaar value of your chests
   - Select chests on your island, then get an overview of all items in the selected chests and the Bazaar value of the items
-  - command: `/onyx analyzeChests`
+  - command: `/skyh analyzeChests`
 - Auction house: Mark sold/ended/expired auctions
   - either one letter (S, E, E) or the full word
 - Auction house: show price for each lvl 1 enchantment book required to craft a higher tier book
   - only works on enchanted books with *one* enchantment
   - enabled for all ultimate and Turbo-crop enchantments
-  - additional enchantments can be added via `/onyx config` *(Keep in mind that not all high-level enchantments can be created by combining lower level books!)*
+  - additional enchantments can be added via `/skyh config` *(Keep in mind that not all high-level enchantments can be created by combining lower level books!)*
 - Bazaar: Added order (sort) functionality to 'Sell Inventory/Sacks Now' tooltips
 - SkyBlock Dungeon Party Finder additions:
-  - new `/onyx config` option: `Minimum "Dungeon level required"`
+  - new `/skyh config` option: `Minimum "Dungeon level required"`
 - Added new minions to `/m analyzeIslands` (Mining + Farming)
-- `/onyx stalkskyblock` additions:
+- `/skyh stalkskyblock` additions:
   - Added 'last profile save' (= last time user played SkyBlock)
   - Added Enchanting, Farming, Mining, and Combat 51-60
   - Added missing Runecrafting 25
   - Added Dungeons: Catacombs Master Mode support
-- `/onyx stalk`: Added "Game Master" rank
+- `/skyh stalk`: Added "Game Master" rank
 - Added mini-"tutorial" on how to open the config gui (to move the dungeon overlay)
-- Added a search to `/onyx config`
+- Added a search to `/skyh config`
 
 ### Changed
 - Refined the comma representation of large numbers abbreviated with k, m, b
@@ -186,19 +186,19 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 ### Fixed
 - Fixed issue with 'no dung class selected'
 - Unexpected API-related exceptions no longer void all chat output
-- Greatly increased speed of the Log Search (`/onyx search`)
+- Greatly increased speed of the Log Search (`/skyh search`)
 
 ## [1.8.9-0.12.0] - 03.01.2021
 ### Added
 - New config options to change/adjust/deactivate some features:
   - Auto-replacement of `/r ` with `/w <last sender>`
-  - Short alias `/m` for `/onyx` command
+  - Short alias `/m` for `/skyh` command
   - Copy inventories to clipboard as JSON with <kbd>CTRL</kbd> + <kbd>C</kbd>
-  - (and several more - simply look through `/onyx config`)
+  - (and several more - simply look through `/skyh config`)
 - Added sound when a best friend comes online (deactivated by default)
 - Check how long current world has been loaded
   - ≈ when server was last restarted
-  - via command `/onyx worldage`
+  - via command `/skyh worldage`
   - notification when joining a recently loaded or a very old server (toggleable via config)
 - SkyBlock Bazaar graphs improvements:
   - make graphs easier to read by connecting graphs' nodes
@@ -234,12 +234,12 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ## [1.8.9-0.11.0] - 28.09.2020
 ### Added
-- SkyBlock Dungeons Party: new command `/onyx dungeon party`
+- SkyBlock Dungeons Party: new command `/skyh dungeon party`
     - short alias: `/m dp`):
     - displays current `/party` members' selected class, armor and dungeons floor completions
 
 ### Changed
-- Completely re-done the config gui (`/onyx config`)
+- Completely re-done the config gui (`/skyh config`)
   - now separated into sections and sub-sections
   - added moar configurable things
   - some config settings have a live-preview next to them
@@ -249,11 +249,11 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
   - When a new player joins the party, it shows not only armor, but also completed dungeons stats
 - Improved SkyBlock dungeon performance overlay
   - Overlay can be moved more precisely
-  - Dungeons can be "joined" and "left" manually (if the automatic detection fails): `/onyx dungeon <enter/leave>`
+  - Dungeons can be "joined" and "left" manually (if the automatic detection fails): `/skyh dungeon <enter/leave>`
 - Improved handling of invalid/missing Hypixel API key
 - Dungeon item quality:
    - Show item quality + obtained floor by default (can be changed in config)
-- `/onyx stalkskyblock`:
+- `/skyh stalkskyblock`:
    - Switched from sky.lea.moe (discontinued) to sky.shiiyu.moe
    - Added dungeons stats
 
@@ -266,7 +266,7 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ## [1.8.9-0.10.2] - 15.09.2020
 ### Added
-- Added keybinding (default `M`) to open chat with `/onyx ` pre-typed
+- Added keybinding (default `M`) to open chat with `/skyh ` pre-typed
 - New sub-command: `/m cmd [arguments]` to fix command conflicts with server-side commands with the same name `/m`
   - e.g. `/m cmd hello world` executes the server command `/m hello world`
 - Added `/<command with tab-completable username> say [optional text]`: You can e.g. say `f` again without triggering the server-side command `/f` by typing `/f say`
@@ -280,8 +280,8 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 - Dungeon performance tracker: added Class Milestones
 
 ### Changed
-- Reorganized `/onyx` command (internally and `/onyx help`)
-- Added optional parameter: `/onyx search [initial query]` to set the initial search query before opening the Log search
+- Reorganized `/skyh` command (internally and `/skyh help`)
+- Added optional parameter: `/skyh search [initial query]` to set the initial search query before opening the Log search
 
 ### Fixed
 - Added another way to detect entering a SkyBlock dungeon
@@ -291,28 +291,28 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 ### Added
 - Best friends online check:
   - check if one of your best friends is currently online
-  - checked automatically after joining a server (can be disabled via `/onyx config`)
-  - also, manually with `/onyx online`
+  - checked automatically after joining a server (can be disabled via `/skyh config`)
+  - also, manually with `/skyh online`
   - names of online best friends can be tab-completed as well
 - SkyBlock Dungeon performance tracker:
   - Features: Skill score calculation (death counter and failed puzzle counter), destroyed crypts tracker (only detects up to ~50 blocks away from the player), and elapsed time indicator
   - Overlay + chat output
-    - Chat output: runs automatically; or manually with `/onyx dungeon`
-    - Overlay can be modified with `/onyx dungeonGui`
+    - Chat output: runs automatically; or manually with `/skyh dungeon`
+    - Overlay can be modified with `/skyh dungeonGui`
   - (replaces Dungeon deaths tracker)
 - SkyBlock Dungeon Party Finder: Lookup of joined players' armor
-  - can be disabled or changed with `/onyx config`
+  - can be disabled or changed with `/skyh config`
 
 ### Changed
-- renamed package to match [onyxp.de](https://onyxp.de)
-- `/onyx stalk`:
+- renamed package to match [skyh.de](https://skyh.de)
+- `/skyh stalk`:
   - Replaced 3rd party with official API
-  - new, shorter alias: `/onyx s`
-  - new, gentler alias: `/onyx askPolitelyWhereTheyAre` (stalking = bad)
-- `/onyx stalkskyblock`:
+  - new, shorter alias: `/skyh s`
+  - new, gentler alias: `/skyh askPolitelyWhereTheyAre` (stalking = bad)
+- `/skyh stalkskyblock`:
   - added new stats: skill average, slayer levels, pets
-  - new, shorter alias: `/onyx ss`
-  - new, gentler alias: `/onyx askPolitelyAboutTheirSkyBlockProgress`
+  - new, shorter alias: `/skyh ss`
+  - new, gentler alias: `/skyh askPolitelyAboutTheirSkyBlockProgress`
 
 ### Fixed
 - Remove ": " when copying chat messages
@@ -324,11 +324,11 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 ## [1.8.9-0.9.0] - 23.07.2020
 ### Added
 - Added SkyBlock Dungeon deaths counter
-  - sends current deaths automatically; or manually with `/onyx deaths`
-- New alias for `/onyx` command: `/m`
+  - sends current deaths automatically; or manually with `/skyh deaths`
+- New alias for `/skyh` command: `/m`
 - New command `/rr`: alias for `/r` without the auto-replacement to `/msg <latest username>`
   - useful when someone has direct messages disabled and can only be messaged back with `/r`
-- Added `/onyx say [optional text]`: You can say `onyx` again without triggering the command `/onyx` 🎉 
+- Added `/skyh say [optional text]`: You can say `skyh` again without triggering the command `/skyh` 🎉 
 - Config option: Change position of item quality in tooltip of dungeon items
 
 ### Changed
@@ -343,7 +343,7 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 - Fixed more special case dungeon item tooltips
   - more special reforge names for specific armor items
   - now includes dungeon items without reforges
-- `/onyx stalk`: Fix players appearing offline when apiSession is set to `false`
+- `/skyh stalk`: Fix players appearing offline when apiSession is set to `false`
 
 ## [1.8.9-0.8.1] - 20.07.2020
 ### Added
@@ -363,10 +363,10 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
     - hold <kbd>shift</kbd> while viewing the tooltip of a dungeon item: this will normalize stats (remove stats from reforging and essences ✪), recalculate the item stats inside dungeons, and display the item stats inside dungeons if it had been enhanced 5x with essences (✪)
   - Added Dungeon Party Finder improvements
     - indicate parties that (don't) meet certain criteria: "no duped roles", "class levels have to be lvl >X"
-    - adjustable via `/onyx config`
+    - adjustable via `/skyh config`
 
 ### Changed
-- Replaced `/onyx nameChangeCheck` with `/onyx nameChangeCheck <playerName>`
+- Replaced `/skyh nameChangeCheck` with `/skyh nameChangeCheck <playerName>`
   - Instead of triggering a manual check for name changes of *all* best friends, you can now only trigger a manual check for a single name
 
 ### Fixed
@@ -378,15 +378,15 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ## [1.8.9-0.7.0] - 05.07.2020
 ### Changed
-- Renamed mod from `Onyx` to `Onyxpannel` 🐮
-  - `Onyx` originally focused on **communication**-related features
-  - `Onyxpannel` is a **collection** of various features
+- Renamed mod from `Skyh` to `Skyhaven` 🐮
+  - `Skyh` originally focused on **communication**-related features
+  - `Skyhaven` is a **collection** of various features
 
 ## [1.8.9-0.6.0] - 05.07.2020
 ### Added
-- Minecraft log file search `/onyx search`
-- Analyze minions on a private island `/onyx analyzeIsland` 
-- List SkyBlock info of a player `/onyx stalkskyblock <playerName>`
+- Minecraft log file search `/skyh search`
+- Analyze minions on a private island `/skyh analyzeIsland` 
+- List SkyBlock info of a player `/skyh stalkskyblock <playerName>`
 - Config option to toggle between Arabic and Roman numerals
   - used for skill levels and minion tiers currently
 - Added info to auctions' tooltips: price per item
@@ -398,7 +398,7 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 ## [1.8.9-0.5.0] - 04.05.2020
 ### Added
 - Added Tab-completable usernames for several commands (e.g. party, msg, boop, ...)
-  - the list of supported commands can be modified via `/onyx config` &rarr; `Commands with Tab-completable usernames`
+  - the list of supported commands can be modified via `/skyh config` &rarr; `Commands with Tab-completable usernames`
   - Tab-completable usernames consist of: the last 50 players that typed in private/friends, Guild or Party chat; up to 50 best friends that are currently logged in
 
 ### Changed
@@ -423,16 +423,16 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ## [1.8.9-0.3.1] - 29.03.2020
 ### Fixed
-- Fixed NullPointer in `/onyx stalk` and improved mode output to be more human-readable
+- Fixed NullPointer in `/skyh stalk` and improved mode output to be more human-readable
 
 ## [1.8.9-0.3.0] - 28.03.2020
 ### Added
 - Added first iteration of Hypixel API integration:
-  - `/onyx stalk <player>`: Get info about player's status
-- `/onyx nameChangeCheck`: Force a scan for changed names of best friends
+  - `/skyh stalk <player>`: Get info about player's status
+- `/skyh nameChangeCheck`: Force a scan for changed names of best friends
 
 ### Changed
-- Moved best friends add/remove functionality from config GUI back to commands (`/onyx <add|remove> <name>`)
+- Moved best friends add/remove functionality from config GUI back to commands (`/skyh <add|remove> <name>`)
 - Saving best friends' UUIDs now (instead of just the name), also checking for name changes periodically to keep best friends list up to date
 
 ## [1.8.9-0.2.0] - 08.03.2020
@@ -448,34 +448,34 @@ All other features of Onyxpannel *do not* require an API key and thus should be 
 
 ## [0.1] - 01.03.2020
 ### Added
-- Toggle to hide all join/leave notifications (`/onyx toggle`)
+- Toggle to hide all join/leave notifications (`/skyh toggle`)
 - 'Best friends' list to limit the amount of join and leave notifications (see below)
 - Auto-replace `/r` with `/msg <latest username>`
 - Copy chat components via <kbd>ALT</kbd> + <kbd>right click</kbd>
-- Change guiScale to any value (`/onyx guiscale [newValue]`)
+- Change guiScale to any value (`/skyh guiscale [newValue]`)
 
-*Note:* The 'best friends' list is currently available via <kbd>ESC</kbd> > Mod Options > Onyxpannel > Config > bestFriends.
+*Note:* The 'best friends' list is currently available via <kbd>ESC</kbd> > Mod Options > Skyhaven > Config > bestFriends.
 
-[1.8.9-0.16.1]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.16.0...v1.8.9-0.16.1
-[1.8.9-0.16.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.15.1...v1.8.9-0.16.0
-[1.8.9-0.15.1]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.15.0...v1.8.9-0.15.1
-[1.8.9-0.15.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.14.0...v1.8.9-0.15.0
-[1.8.9-0.14.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.13.0...v1.8.9-0.14.0
-[1.8.9-0.13.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.12.0...v1.8.9-0.13.0
-[1.8.9-0.12.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.11.0...v1.8.9-0.12.0
-[1.8.9-0.11.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.10.2...v1.8.9-0.11.0
-[1.8.9-0.10.2]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.10.1...v1.8.9-0.10.2
-[1.8.9-0.10.1]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.10.0...v1.8.9-0.10.1
-[1.8.9-0.10.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.9.0...v1.8.9-0.10.0
-[1.8.9-0.9.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.8.1...v1.8.9-0.9.0
-[1.8.9-0.8.1]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.8.0...v1.8.9-0.8.1
-[1.8.9-0.8.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.7.1...v1.8.9-0.8.0
-[1.8.9-0.7.1]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.7.0...v1.8.9-0.7.1
-[1.8.9-0.7.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.6.0...v1.8.9-0.7.0
-[1.8.9-0.6.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.5.0...v1.8.9-0.6.0
-[1.8.9-0.5.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.4.0...v1.8.9-0.5.0
-[1.8.9-0.4.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.3.1...v1.8.9-0.4.0
-[1.8.9-0.3.1]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.3.0...v1.8.9-0.3.1
-[1.8.9-0.3.0]: https://github.com/onyx-mc/Onyxpannel/compare/v1.8.9-0.2.0...v1.8.9-0.3.0
-[1.8.9-0.2.0]: https://github.com/onyx-mc/Onyxpannel/compare/v0.1...v1.8.9-0.2.0
-[0.1]: https://github.com/onyx-mc/Onyxpannel/releases/tag/v0.1
+[1.8.9-0.16.1]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.16.0...v1.8.9-0.16.1
+[1.8.9-0.16.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.15.1...v1.8.9-0.16.0
+[1.8.9-0.15.1]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.15.0...v1.8.9-0.15.1
+[1.8.9-0.15.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.14.0...v1.8.9-0.15.0
+[1.8.9-0.14.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.13.0...v1.8.9-0.14.0
+[1.8.9-0.13.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.12.0...v1.8.9-0.13.0
+[1.8.9-0.12.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.11.0...v1.8.9-0.12.0
+[1.8.9-0.11.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.10.2...v1.8.9-0.11.0
+[1.8.9-0.10.2]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.10.1...v1.8.9-0.10.2
+[1.8.9-0.10.1]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.10.0...v1.8.9-0.10.1
+[1.8.9-0.10.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.9.0...v1.8.9-0.10.0
+[1.8.9-0.9.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.8.1...v1.8.9-0.9.0
+[1.8.9-0.8.1]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.8.0...v1.8.9-0.8.1
+[1.8.9-0.8.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.7.1...v1.8.9-0.8.0
+[1.8.9-0.7.1]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.7.0...v1.8.9-0.7.1
+[1.8.9-0.7.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.6.0...v1.8.9-0.7.0
+[1.8.9-0.6.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.5.0...v1.8.9-0.6.0
+[1.8.9-0.5.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.4.0...v1.8.9-0.5.0
+[1.8.9-0.4.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.3.1...v1.8.9-0.4.0
+[1.8.9-0.3.1]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.3.0...v1.8.9-0.3.1
+[1.8.9-0.3.0]: https://github.com/skyh-mc/Skyhaven/compare/v1.8.9-0.2.0...v1.8.9-0.3.0
+[1.8.9-0.2.0]: https://github.com/skyh-mc/Skyhaven/compare/v0.1...v1.8.9-0.2.0
+[0.1]: https://github.com/skyh-mc/Skyhaven/releases/tag/v0.1

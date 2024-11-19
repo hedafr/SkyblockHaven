@@ -1,98 +1,111 @@
-# 🔮 **Onyxpannel by Onyx**  
-**Onyxpannel** is a feature-packed **client-side-only Forge mod** for **Minecraft 1.8.9**, created by [Onyx](https://namemc.com/profile/Onyx). It focuses on enhancing your **Hypixel SkyBlock** experience, while offering useful utilities for all Minecraft players. ✨
+# 🐄 Skyhaven by Skyh
 
-![Onyx's Collection](https://github.com/onyx-mc/Onyxpannel/blob/master/onyxpannel.png?raw=true)
-
----
-
-## 🚀 **Why Onyxpannel?**  
-- **SkyBlock Focused**: Designed specifically for Hypixel SkyBlock to boost your gameplay.  
-- **Command-Centric**: Powerful in-game commands to streamline your Minecraft experience.  
-- **Easy Customization**: Control the mod's features via simple commands and settings.
+**Skyhaven** is a powerful, client-side-only Forge mod for **Minecraft 1.8.9**, developed by Skyh. This mod is packed with features tailored to enhance your **Hypixel SkyBlock** experience and more! 🚀
 
 ---
 
-## 🛠️ **Key Features**
+## ⚡ Key Features
 
-### **🔧 General Commands**
-Below is a list of essential general commands for both gameplay enhancement and utility. 
+### **General Commands & Utilities**
+- **Command to see all features:**  
+  `/skyh help`
 
-| **Feature**                                 | **Command/Usage**                                            |
-|---------------------------------------------|--------------------------------------------------------------|
-| **Search Minecraft log files**             | `/onyx search` *(Click `?` for more help)*                    |
-| **Stalk a player (check their status)**    | `/onyx stalk`                                                |
-| **List all client-side commands**          | `/commandslist`                                              |
-| **Copy chat component (messages, links)**  | <kbd>ALT</kbd> + <kbd>Right Click</kbd> *(Hold <kbd>Shift</kbd> for full component)* |
-| **Copy single item or full inventory as JSON** | <kbd>CTRL</kbd> + <kbd>C</kbd> (single item)<br><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>C</kbd> (whole inventory) |
-| **Copy info of what you're looking at (NPCs, items, etc.)** | `/onyx whatAmILookingAt` |
-| **Tab-complete usernames for commands**    | `/onyx config` → **Tab-completable usernames**               |
-| **Auto-replace `/r` with `/w <latest username>`** | Use `/r`, type `/rr` to disable auto-replacement  |
-| **Adjust GUI scale**                       | `/onyx guiscale [newValue]`                                  |
-| **Check for mod updates**                  | `/onyx update`                                               |
+- **Command to adjust mod settings:**  
+  `/skyh config`
 
----
+#### **Highlighted Commands:**
 
-### **🌟 SkyBlock Enhancements**
-Take your **SkyBlock** experience to the next level with these dedicated features and utilities.
+- **Search Minecraft logs**  
+  `/skyh search`  
+  *(Click the `?` for detailed info)*
 
-| **Feature**                                            | **Command/Usage**                                           |
-|--------------------------------------------------------|-------------------------------------------------------------|
-| **Stalk SkyBlock stats of a player**                  | `/onyx stalkskyblock`                                        |
-| **Analyze chests, Bazaar, lowest BINs, and NPC value** | `/onyx analyzeChests`                                        |
-| **Analyze island minions and chest/hopper setups**     | `/onyx analyzeIsland`                                        |
-| **Enhanced Dungeon item tooltips**                    | Hold <kbd>Shift</kbd> to normalize stats                    |
-| **Dungeon Party Finder**                              | `/onyx config party` → Customize Dungeon Party setup         |
-| **Dungeon Party Inspector (who's in your party?)**    | `/onyx dungeon party` or `/onyx dp`                          |
-| **Dungeon performance tracking (skills, milestones)** | Automatically tracks stats or `/onyx dungeon` for overlay    |
-| **World uptime (last restart timestamp)**             | `/onyx worldage` + `/onyx config` → **SkyBlock**             |
-| **Advanced tooltip info (item age, pet exp, etc.)**    | `/onyx config` → **SkyBlock** → **Tooltip Enhancements**     |
-| **Quick item price lookup (auction, market, etc.)**    | Prices: <kbd>P</kbd>, Wiki: <kbd>I</kbd> *(Hold <kbd>SHIFT</kbd> to switch between Fandom and official wiki)* |
+- **Stalk a player (status, game, etc.)**  
+  `/skyh stalk`
 
----
+- **List all client-side commands**  
+  `/commandslist`
 
-## 🗂️ **Other Key Utilities**
+- **Copy chat components (links, messages, etc.)**  
+  <kbd>ALT</kbd> + <kbd>Right Click</kbd>  
+  *(Hold <kbd>Shift</kbd> for full component copy)*
 
-### **🌐 World & Player Interaction**
+- **Copy inventories as JSON**  
+  <kbd>CTRL</kbd> + <kbd>C</kbd> *(single item)*  
+  <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>C</kbd> *(entire inventory)*
 
-| **Feature**                                             | **Command/Usage**                                           |
-|---------------------------------------------------------|-------------------------------------------------------------|
-| **Player info and status (who's online?)**              | `/onyx playerinfo [playername]`                             |
-| **Quick lookup for player achievements**                | `/onyx achievements [playername]`                            |
-| **Quickly open Minecraft logs for errors or warnings**  | `/onyx logs` *(Easy to access log viewer)*                   |
-| **Player social interactions (invite to party, etc.)**  | `/onyx social` → **Player social commands**                  |
+- **Copy info of what you're looking at (NPCs, mobs, items, etc.)**  
+  `/skyh whatAmILookingAt`
+
+- **Auto-tab-complete usernames in various commands**  
+  `/skyh config` → **Tab-completable usernames**
+
+- **Auto-replace `/r` with `/w <latest username>`**  
+  *(Use `/rr` to disable)*
+
+- **Change GUI scale easily**  
+  `/skyh guiscale [value]`
+
+- **Check for mod updates**  
+  `/skyh update`
 
 ---
 
-### **🕹️ Improved User Experience**
+### 🏝️ **SkyBlock Enhancements**
 
-| **Feature**                                             | **Command/Usage**                                           |
-|---------------------------------------------------------|-------------------------------------------------------------|
-| **Customizable in-game overlays (e.g., map, party info)** | `/onyx overlay` → **Enable/Disable overlays**               |
-| **Simplify inventory management**                       | `<kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>I</kbd>` *(Open inventory grid)* |
-| **Quick chat macros for frequent phrases**               | `/onyx macros` → **Setup custom chat macros**                |
+#### **SkyBlock-Specific Commands:**
+
+- **Stalk SkyBlock stats of a player**  
+  `/skyh stalkskyblock`
+
+- **Analyze chests, Bazaar, BINs, and NPC value on your island**  
+  `/skyh analyzeChests`
+
+- **Analyze minions, chests, and hoppers on your island**  
+  `/skyh analyzeIsland`
+
+- **Dungeon item tooltips (item quality, floor, stats)**  
+  *(Hold <kbd>Shift</kbd> for normalized stats)*
+
+- **Advanced Dungeon Party Finder**  
+  Configure via:  
+  `/skyh config party`
+
+- **Dungeon Party Inspector (Who’s in your party? Missing class?)**  
+  `/skyh dungeon party` or `/skyh dp`
+
+- **Dungeon performance tracker and overlay**  
+  Automatically tracks:  
+  - Skill score  
+  - Class milestone  
+  - Destroyed crypts  
+  - Elapsed time
+
+- **World uptime check (server restart timestamp)**  
+  `/skyh worldage` + `/skyh config` → **SkyBlock**
+
+- **Enhanced item tooltips (item age, pet exp, auction prices, etc.)**  
+  Configure via:  
+  `/skyh config` → **SkyBlock** → **Tooltip Enhancements**
+
+- **Quick lookup for item prices and wiki articles**  
+  - Prices: <kbd>P</kbd>  
+  - Wiki: <kbd>I</kbd> *(Hold <kbd>SHIFT</kbd> to toggle between official and Fandom wiki)*
 
 ---
 
-## 📥 **Getting Started**
+## 📥 **Get Started**
 
-To begin using Onyxpannel, simply download the `.jar` file from the [release section](https://github.com/onyx-mc/Onyxpannel/releases).
-
-Check out the **[Changelog](CHANGELOG.md)** for the latest updates and improvements.
-
----
-
-## 🤝 **Community & Feedback**
-
-We love hearing from you! Join our community for support, suggestions, and updates.
-
-- **Join the Discord**: [Click here to join!](https://discord.gg/fU2tFPf)  
-- **Report Issues**: [Create an issue on GitHub](https://github.com/onyx-mc/Onyxpannel/issues)
+- Download the compiled `.jar` file from the [release section](https://github.com/skyh-mc/Skyhaven/releases).
+- Check for the latest updates and [Changelog](CHANGELOG.md).
 
 ---
 
-### **Why You’ll Love Onyxpannel:**
-- Unlock powerful SkyBlock tools that save you time and enhance your gameplay.
-- Improve your Dungeon experience with enhanced item stats and party management.
-- Customize the mod to fit your needs with intuitive commands and settings.
+## 💬 **Join the Community**
 
-Enjoy playing with **Onyxpannel**, your all-in-one tool for a better Minecraft experience! 🌟
+Have questions, feedback, or suggestions? We’d love to hear from you!  
+Join the [Discord server](https://discord.gg/fU2tFPf) to connect with others.
+
+---
+
+**Skyhaven** is designed to streamline your **SkyBlock** journey and provide powerful tools to improve your gameplay. Don’t forget to explore all its features and make your game more efficient and fun! 🎮✨
+

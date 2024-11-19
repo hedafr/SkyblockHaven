@@ -5,8 +5,8 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "${giturl}",
-  "updateUrl": "https://raw.githubusercontent.com/onyx-mc/Onyxpannel/master/update.json",
-  "authorList": ["Onyx"],
+  "updateUrl": "https://raw.githubusercontent.com/skyh-mc/Skyhaven/master/update.json",
+  "authorList": ["Skyh"],
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
